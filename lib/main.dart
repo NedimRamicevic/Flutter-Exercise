@@ -19,16 +19,23 @@ class Home extends StatelessWidget {
       body: Column(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image(
                   image: NetworkImage(
-                      "https://www.buseterim.com.tr/upload/default/2019/2/20/saraybosnadayapmanzgereken10sey680.jpg",
-                      scale: 5)),
+                      "https://platincdn.com/216/pictures/RZIVGFSMFV5112016103412_Bora_BR20_Full_Metal_Otomatik_Av_Tufe-i.jpg",
+                      scale: 7)),
               Image(
-                image: NetworkImage(
-                    "https://3.bp.blogspot.com/-Zg_4OG6QBL8/Uz8gTh1FgSI/AAAAAAAAvVA/rRlsHzewHpw/s1600/Ned%C5%BEari%C4%87i+Camii,+Gracanica,+Bosna+Hersek.jpg",
-                    scale: 5),
-              ),
+                  image: NetworkImage(
+                      "https://st2.myideasoft.com/idea/bs/58/myassets/products/246/ulkucu-market-biber-gazi.jpg?revision=1512061886",
+                      scale: 5)),
+              Container(
+                child: Text(
+                  "Yala Beni Tara Beni",
+                  style: TextStyle(
+                      backgroundColor: Colors.black, color: Colors.red),
+                ),
+              )
             ],
           ),
           Row(
@@ -36,14 +43,14 @@ class Home extends StatelessWidget {
             children: [
               IconButton(onPressed: null, icon: Icon(Icons.facebook)),
               IconButton(onPressed: null, icon: Icon(Icons.android)),
-              IconButton(onPressed: null, icon: Icon(Icons.))
+              IconButton(onPressed: null, icon: Icon(Icons.android))
             ],
           ),
         ],
       ),
       backgroundColor: Colors.blueGrey,
       floatingActionButton: FloatingActionButton(
-        child: Text("Tıkla"),
+        child: Text("Yala beni Tara Beni"),
         onPressed: null,
         backgroundColor: Colors.red,
       ),
