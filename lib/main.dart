@@ -21,21 +21,23 @@ class Home extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image(
-                  image: NetworkImage(
-                      "https://platincdn.com/216/pictures/RZIVGFSMFV5112016103412_Bora_BR20_Full_Metal_Otomatik_Av_Tufe-i.jpg",
-                      scale: 7)),
-              Image(
-                  image: NetworkImage(
-                      "https://st2.myideasoft.com/idea/bs/58/myassets/products/246/ulkucu-market-biber-gazi.jpg?revision=1512061886",
-                      scale: 5)),
+              Expanded(
+                child: Image(
+                    image: NetworkImage(
+                        "https://platincdn.com/216/pictures/RZIVGFSMFV5112016103412_Bora_BR20_Full_Metal_Otomatik_Av_Tufe-i.jpg",
+                        scale: 7)),
+              ),
               Container(
                 child: Text(
                   "Yala Beni Tara Beni",
                   style: TextStyle(
                       backgroundColor: Colors.black, color: Colors.red),
                 ),
-              )
+              ),
+              Image(
+                  image: NetworkImage(
+                      "https://st2.myideasoft.com/idea/bs/58/myassets/products/246/ulkucu-market-biber-gazi.jpg?revision=1512061886",
+                      scale: 5)),
             ],
           ),
           Row(
