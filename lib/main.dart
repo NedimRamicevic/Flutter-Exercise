@@ -22,13 +22,15 @@ class Home extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
+                flex: 2,
                 child: Image(
                     image: NetworkImage(
                         "https://platincdn.com/216/pictures/RZIVGFSMFV5112016103412_Bora_BR20_Full_Metal_Otomatik_Av_Tufe-i.jpg",
                         scale: 7)),
               ),
               Expanded(
-                child: Container(
+                flex: 3,
+                child: Center(
                   child: Text(
                     "Yala Beni Tara Beni",
                     style: TextStyle(
@@ -37,6 +39,7 @@ class Home extends StatelessWidget {
                 ),
               ),
               Expanded(
+                flex: 2,
                 child: Image(
                     image: NetworkImage(
                         "https://st2.myideasoft.com/idea/bs/58/myassets/products/246/ulkucu-market-biber-gazi.jpg?revision=1512061886",
