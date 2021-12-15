@@ -22,9 +22,15 @@ class Home extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            CircleAvatar(
-              backgroundImage: AssetImage("assets/qq.JPG"),
-              radius: 40,
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage("assets/qq.JPG"),
+                radius: 40,
+              ),
+            ),
+            Divider(
+              height: 60,
+              color: Colors.amberAccent,
             ),
             Text(
               "Name",
@@ -57,6 +63,13 @@ class Home extends StatelessWidget {
             ),
             SizedBox(
               height: 20,
+            ),
+            Text(
+              "Contact",
+              style: TextStyle(color: Colors.grey[500], letterSpacing: 2),
+            ),
+            SizedBox(
+              height: 5,
             ),
             Row(
               children: [
