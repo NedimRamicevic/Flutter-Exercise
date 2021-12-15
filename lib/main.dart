@@ -23,7 +23,8 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             CircleAvatar(
-              backgroundImage: AssetImage('assets/nedim.jpg'),
+              backgroundImage: AssetImage("assets/qq.JPG"),
+              radius: 40,
             ),
             Text(
               "Name",
