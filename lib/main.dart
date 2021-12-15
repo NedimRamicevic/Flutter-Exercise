@@ -22,6 +22,9 @@ class Home extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/nedim.jpg'),
+            ),
             Text(
               "Name",
               style: TextStyle(color: Colors.grey[500], letterSpacing: 2),
