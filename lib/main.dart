@@ -10,58 +10,67 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Center(
-          child: Text("First App"),
-        ),
-        backgroundColor: Colors.black54,
+        title: Text("ID Card"),
+        centerTitle: true,
+        backgroundColor: Colors.grey[850],
+        elevation: 0.0,
       ),
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                flex: 2,
-                child: Image(
-                    image: NetworkImage(
-                        "https://platincdn.com/216/pictures/RZIVGFSMFV5112016103412_Bora_BR20_Full_Metal_Otomatik_Av_Tufe-i.jpg",
-                        scale: 7)),
-              ),
-              Expanded(
-                flex: 3,
-                child: Center(
-                  child: Text(
-                    "Yala Beni Tara Beni",
-                    style: TextStyle(
-                        backgroundColor: Colors.black, color: Colors.red),
-                  ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              "Name",
+              style: TextStyle(color: Colors.grey[500], letterSpacing: 2),
+            ),
+            SizedBox(height: 5.0),
+            Text(
+              "Nedim Ramazanoğlu",
+              style: TextStyle(
+                  color: Colors.amberAccent,
+                  letterSpacing: 1,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Title",
+              style: TextStyle(color: Colors.grey[500], letterSpacing: 2),
+            ),
+            SizedBox(height: 5.0),
+            Text(
+              "Cabin Interior Shop Engineer",
+              style: TextStyle(
+                  color: Colors.amberAccent,
+                  letterSpacing: 1,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
                 ),
-              ),
-              Expanded(
-                flex: 2,
-                child: Image(
-                    image: NetworkImage(
-                        "https://st2.myideasoft.com/idea/bs/58/myassets/products/246/ulkucu-market-biber-gazi.jpg?revision=1512061886",
-                        scale: 5)),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconButton(onPressed: null, icon: Icon(Icons.facebook)),
-              IconButton(onPressed: null, icon: Icon(Icons.android)),
-              IconButton(onPressed: null, icon: Icon(Icons.android))
-            ],
-          ),
-        ],
-      ),
-      backgroundColor: Colors.blueGrey,
-      floatingActionButton: FloatingActionButton(
-        child: Text("Yala beni Tara Beni"),
-        onPressed: null,
-        backgroundColor: Colors.red,
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "mr.ramicevic@gmail.com",
+                  style: TextStyle(color: Colors.grey[400]),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
