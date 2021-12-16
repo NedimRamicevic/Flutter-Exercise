@@ -31,6 +31,35 @@ class _HomeState extends State<Home> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                    onPressed: () {
+                      setState(() {
+                        name = "Nedim Ramazanoğlu";
+                        title = "Cabin Interior Engineer";
+                        mail = "mr.ramicevic@gmail.com";
+                      });
+                    },
+                    child: Text("nedim",
+                        style: TextStyle(
+                            backgroundColor: Colors.black87,
+                            color: Colors.grey[400]))),
+                TextButton(
+                    onPressed: () {
+                      setState(() {
+                        name = "Neim Ramazanoğlu";
+                        title = "Senior Developer";
+                        mail = "mr.ramazanoglu@gmail.com";
+                      });
+                    },
+                    child: Text("neim",
+                        style: TextStyle(
+                            backgroundColor: Colors.black87,
+                            color: Colors.grey[400]))),
+              ],
+            ),
             Center(
               child: CircleAvatar(
                 backgroundImage: AssetImage("assets/qq.JPG"),
