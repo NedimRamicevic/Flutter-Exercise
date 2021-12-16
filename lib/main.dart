@@ -12,6 +12,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  String name = "Nedim Ramazanoğlu";
+  String title = "Cabin Interior Engineer";
+  String mail = "mr.ramicevic@gmail.com";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +47,7 @@ class _HomeState extends State<Home> {
             ),
             SizedBox(height: 5.0),
             Text(
-              "Nedim Ramazanoğlu",
+              name,
               style: TextStyle(
                   color: Colors.amberAccent,
                   letterSpacing: 1,
@@ -59,7 +63,7 @@ class _HomeState extends State<Home> {
             ),
             SizedBox(height: 5.0),
             Text(
-              "Cabin Interior Shop Engineer",
+              title,
               style: TextStyle(
                   color: Colors.amberAccent,
                   letterSpacing: 1,
@@ -86,7 +90,7 @@ class _HomeState extends State<Home> {
                   width: 10,
                 ),
                 Text(
-                  "mr.ramicevic@gmail.com",
+                  mail,
                   style: TextStyle(color: Colors.grey[400]),
                 )
               ],
