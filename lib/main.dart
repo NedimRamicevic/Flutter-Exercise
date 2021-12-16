@@ -13,18 +13,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<User> users = [
+  User user = 
     User(
         name: "Nedim Ramazanoğlu",
         title: "Cabin Interior Engineer",
         mail: "mr.ramicevic@gmail.com",
-        photo: "assets\nedim.jpg"),
-    User(
-        name: "Neim Ramazanoğlu",
-        title: "Senior React Developer",
-        mail: "mr.ramazanoglu@gmail.com",
-        photo: "assets/neim.JPG")
-  ];
+        photo: "assets\nedim.jpg")
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +41,10 @@ class _HomeState extends State<Home> {
                 TextButton(
                     onPressed: () {
                       setState(() {
-                        name = "Nedim Ramazanoğlu";
-                        title = "Cabin Interior Engineer";
-                        mail = "mr.ramicevic@gmail.com";
-                        photo = "assets/qq.JPG";
+                        user.name = "Nedim Ramazanoğlu";
+                        user.title = "Cabin Interior Engineer";
+                        user.mail = "mr.ramicevic@gmail.com";
+                        user.photo = "assets/qq.JPG";
                       });
                     },
                     child: Text("nedim",
@@ -61,10 +55,10 @@ class _HomeState extends State<Home> {
                 TextButton(
                     onPressed: () {
                       setState(() {
-                        name = "Neim Ramazanoğlu";
-                        title = "Senior React Developer";
-                        mail = "mr.ramazanoglu@gmail.com";
-                        photo = "assets/neim.JPG";
+ user.name = "Neim Ramazanoğlu";
+                        user.title = "Senior React Developer";
+                        user.mail = "mr.ramazanoglu@gmail.com";
+                        user.photo = "assets/neim.JPG";
                       });
                     },
                     child: Text("neim",
@@ -76,7 +70,7 @@ class _HomeState extends State<Home> {
             ),
             Center(
               child: CircleAvatar(
-                backgroundImage: AssetImage(photo),
+                backgroundImage: AssetImage(user.photo),
                 radius: 40,
               ),
             ),
