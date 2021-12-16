@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'users.dart';
 
 void main() => runApp(MaterialApp(home: Home()));
 
@@ -12,10 +13,18 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String name = "Nedim Ramazanoğlu";
-  String title = "Cabin Interior Engineer";
-  String mail = "mr.ramicevic@gmail.com";
-  String photo = "assets\nedim.jpg";
+  List<User> users = [
+    User(
+        name: "Nedim Ramazanoğlu",
+        title: "Cabin Interior Engineer",
+        mail: "mr.ramicevic@gmail.com",
+        photo: "assets\nedim.jpg"),
+    User(
+        name: "Neim Ramazanoğlu",
+        title: "Senior React Developer",
+        mail: "mr.ramazanoglu@gmail.com",
+        photo: "assets/neim.JPG")
+  ];
 
   @override
   Widget build(BuildContext context) {
