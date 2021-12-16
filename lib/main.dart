@@ -15,6 +15,7 @@ class _HomeState extends State<Home> {
   String name = "Nedim Ramazanoğlu";
   String title = "Cabin Interior Engineer";
   String mail = "mr.ramicevic@gmail.com";
+  String photo = "assets\nedim.jpg";
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +41,7 @@ class _HomeState extends State<Home> {
                         name = "Nedim Ramazanoğlu";
                         title = "Cabin Interior Engineer";
                         mail = "mr.ramicevic@gmail.com";
+                        photo = "assets/qq.jpg";
                       });
                     },
                     child: Text("nedim",
@@ -52,6 +54,7 @@ class _HomeState extends State<Home> {
                         name = "Neim Ramazanoğlu";
                         title = "Senior Developer";
                         mail = "mr.ramazanoglu@gmail.com";
+                        photo = "assets/neim.JPG";
                       });
                     },
                     child: Text("neim",
@@ -62,7 +65,7 @@ class _HomeState extends State<Home> {
             ),
             Center(
               child: CircleAvatar(
-                backgroundImage: AssetImage("assets/qq.JPG"),
+                backgroundImage: AssetImage("assets/neim.JPG"),
                 radius: 40,
               ),
             ),
