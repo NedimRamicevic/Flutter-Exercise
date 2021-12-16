@@ -13,12 +13,85 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  User user = 
-    User(
-        name: "Nedim Ramazanoğlu",
-        title: "Cabin Interior Engineer",
-        mail: "mr.ramicevic@gmail.com",
-        photo: "assets\nedim.jpg")
+  User user = User(
+      name: "Nedim Ramazanoğlu",
+      title: "Cabin Interior Engineer",
+      mail: "mr.ramicevic@gmail.com",
+      photo: "assets\nedim.jpg");
+
+  Widget idCard(user) {
+    return Card(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Center(
+            child: CircleAvatar(
+              backgroundImage: AssetImage(user.photo),
+              radius: 40,
+            ),
+          ),
+          Divider(
+            height: 60,
+            color: Colors.amberAccent,
+          ),
+          Text(
+            "Name",
+            style: TextStyle(color: Colors.grey[500], letterSpacing: 2),
+          ),
+          SizedBox(height: 5.0),
+          Text(
+            user.name,
+            style: TextStyle(
+                color: Colors.amberAccent,
+                letterSpacing: 1,
+                fontSize: 18,
+                fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Title",
+            style: TextStyle(color: Colors.grey[500], letterSpacing: 2),
+          ),
+          SizedBox(height: 5.0),
+          Text(
+            user.title,
+            style: TextStyle(
+                color: Colors.amberAccent,
+                letterSpacing: 1,
+                fontSize: 18,
+                fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Contact",
+            style: TextStyle(color: Colors.grey[500], letterSpacing: 2),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Row(
+            children: [
+              Icon(
+                Icons.email,
+                color: Colors.grey[400],
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                user.mail,
+                style: TextStyle(color: Colors.grey[400]),
+              )
+            ],
+          )
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +128,7 @@ class _HomeState extends State<Home> {
                 TextButton(
                     onPressed: () {
                       setState(() {
- user.name = "Neim Ramazanoğlu";
+                        user.name = "Neim Ramazanoğlu";
                         user.title = "Senior React Developer";
                         user.mail = "mr.ramazanoglu@gmail.com";
                         user.photo = "assets/neim.JPG";
