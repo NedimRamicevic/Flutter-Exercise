@@ -47,27 +47,27 @@ class _HomeState extends State<Home> {
                     child: Text("nedim",
                         style: TextStyle(
                             fontSize: 18,
-                            backgroundColor: Colors.black87,
-                            color: Colors.grey[400]))),
+                            backgroundColor: Colors.grey[800],
+                            color: Colors.amberAccent))),
                 TextButton(
                     onPressed: () {
                       setState(() {
                         name = "Neim Ramazanoğlu";
-                        title = "Senior Developer";
+                        title = "Senior React Developer";
                         mail = "mr.ramazanoglu@gmail.com";
                         photo = "assets/neim.JPG";
                       });
                     },
                     child: Text("neim",
                         style: TextStyle(
+                            backgroundColor: Colors.grey[800],
                             fontSize: 18,
-                            backgroundColor: Colors.black87,
-                            color: Colors.grey[400]))),
+                            color: Colors.amberAccent))),
               ],
             ),
             Center(
               child: CircleAvatar(
-                backgroundImage: AssetImage("${photo}"),
+                backgroundImage: AssetImage(photo),
                 radius: 40,
               ),
             ),
