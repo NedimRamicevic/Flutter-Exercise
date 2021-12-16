@@ -41,11 +41,12 @@ class _HomeState extends State<Home> {
                         name = "Nedim Ramazanoğlu";
                         title = "Cabin Interior Engineer";
                         mail = "mr.ramicevic@gmail.com";
-                        photo = "assets/qq.jpg";
+                        photo = "assets/qq.JPG";
                       });
                     },
                     child: Text("nedim",
                         style: TextStyle(
+                            fontSize: 18,
                             backgroundColor: Colors.black87,
                             color: Colors.grey[400]))),
                 TextButton(
@@ -59,13 +60,14 @@ class _HomeState extends State<Home> {
                     },
                     child: Text("neim",
                         style: TextStyle(
+                            fontSize: 18,
                             backgroundColor: Colors.black87,
                             color: Colors.grey[400]))),
               ],
             ),
             Center(
               child: CircleAvatar(
-                backgroundImage: AssetImage("assets/neim.JPG"),
+                backgroundImage: AssetImage("${photo}"),
                 radius: 40,
               ),
             ),
