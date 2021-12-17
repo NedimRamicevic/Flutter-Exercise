@@ -19,12 +19,14 @@ class _HomeState extends State<Home> {
         name: "Nedim Ramazanoğlu",
         title: "Cabin Interior Engineer",
         mail: "mr.ramicevic@gmail.com",
-        photo: "assets/qq.JPG"),
+        photo: "assets/qq.JPG",
+        projects: ["naber", "nasılsın"]),
     User(
         name: "Neim Ramazanoğlu",
         title: "Senior React Developer",
         mail: "mr.ramazanoglu@gmail.com",
-        photo: "assets/neim.JPG")
+        photo: "assets/neim.JPG",
+        projects: ["naber", "nasılsın"])
   ];
   int userNum = 0;
 

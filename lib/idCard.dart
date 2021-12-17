@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'user.dart';
+import 'projects.dart';
 
 class IdCard extends StatelessWidget {
   const IdCard({
@@ -79,7 +80,8 @@ class IdCard extends StatelessWidget {
                 style: TextStyle(color: Colors.grey[400]),
               )
             ],
-          )
+          ),
+          Projects(projectList: user.projects)
         ],
       ),
     );
