@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
         name: "Nedim Ramazanoğlu",
         title: "Cabin Interior Engineer",
         mail: "mr.ramicevic@gmail.com",
-        photo: "assets\nedim.jpg"),
+        photo: "assets/qq.JPG"),
     User(
         name: "Neim Ramazanoğlu",
         title: "Senior React Developer",
@@ -27,8 +27,64 @@ class _HomeState extends State<Home> {
   ];
   int userNum = 0;
 
-  Widget idCard(user) {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        title: Text("ID Card"),
+        centerTitle: true,
+        backgroundColor: Colors.grey[850],
+        elevation: 0.0,
+      ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                    onPressed: () {
+                      setState(() => userNum = 0);
+                    },
+                    child: Text("nedim",
+                        style: TextStyle(
+                            fontSize: 18,
+                            backgroundColor: Colors.grey[800],
+                            color: Colors.amberAccent))),
+                TextButton(
+                    onPressed: () {
+                      setState(() => userNum = 1);
+                    },
+                    child: Text("neim",
+                        style: TextStyle(
+                            backgroundColor: Colors.grey[800],
+                            fontSize: 18,
+                            color: Colors.amberAccent))),
+              ],
+            ),
+            IdCard(user: users[userNum])
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class IdCard extends StatelessWidget {
+  const IdCard({
+    Key? key,
+    required this.user,
+  }) : super(key: key);
+
+  final User user;
+
+  @override
+  Widget build(BuildContext context) {
     return Card(
+      color: Colors.grey[900],
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -97,51 +153,6 @@ class _HomeState extends State<Home> {
             ],
           )
         ],
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[900],
-      appBar: AppBar(
-        title: Text("ID Card"),
-        centerTitle: true,
-        backgroundColor: Colors.grey[850],
-        elevation: 0.0,
-      ),
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextButton(
-                    onPressed: () {
-                      setState(() => userNum = 0);
-                    },
-                    child: Text("nedim",
-                        style: TextStyle(
-                            fontSize: 18,
-                            backgroundColor: Colors.grey[800],
-                            color: Colors.amberAccent))),
-                TextButton(
-                    onPressed: () {
-                      setState(() => userNum = 1);
-                    },
-                    child: Text("neim",
-                        style: TextStyle(
-                            backgroundColor: Colors.grey[800],
-                            fontSize: 18,
-                            color: Colors.amberAccent))),
-              ],
-            ),
-            idCard(users[userNum])
-          ],
-        ),
       ),
     );
   }
