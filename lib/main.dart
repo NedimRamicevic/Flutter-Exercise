@@ -25,6 +25,7 @@ class _HomeState extends State<Home> {
         mail: "mr.ramazanoglu@gmail.com",
         photo: "assets/neim.JPG")
   ];
+  int userNum = 0;
 
   Widget idCard(user) {
     return Card(
@@ -120,7 +121,7 @@ class _HomeState extends State<Home> {
               children: [
                 TextButton(
                     onPressed: () {
-                      setState(() {});
+                      setState(() => userNum = 0);
                     },
                     child: Text("nedim",
                         style: TextStyle(
@@ -129,7 +130,7 @@ class _HomeState extends State<Home> {
                             color: Colors.amberAccent))),
                 TextButton(
                     onPressed: () {
-                      setState(() {});
+                      setState(() => userNum = 1);
                     },
                     child: Text("neim",
                         style: TextStyle(
@@ -138,6 +139,7 @@ class _HomeState extends State<Home> {
                             color: Colors.amberAccent))),
               ],
             ),
+            idCard(users[userNum])
           ],
         ),
       ),
