@@ -13,11 +13,18 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  User user = User(
-      name: "Nedim Ramazanoğlu",
-      title: "Cabin Interior Engineer",
-      mail: "mr.ramicevic@gmail.com",
-      photo: "assets\nedim.jpg");
+  List<User> users = [
+    User(
+        name: "Nedim Ramazanoğlu",
+        title: "Cabin Interior Engineer",
+        mail: "mr.ramicevic@gmail.com",
+        photo: "assets\nedim.jpg"),
+    User(
+        name: "Neim Ramazanoğlu",
+        title: "Senior React Developer",
+        mail: "mr.ramazanoglu@gmail.com",
+        photo: "assets/neim.JPG")
+  ];
 
   Widget idCard(user) {
     return Card(
@@ -113,12 +120,7 @@ class _HomeState extends State<Home> {
               children: [
                 TextButton(
                     onPressed: () {
-                      setState(() {
-                        user.name = "Nedim Ramazanoğlu";
-                        user.title = "Cabin Interior Engineer";
-                        user.mail = "mr.ramicevic@gmail.com";
-                        user.photo = "assets/qq.JPG";
-                      });
+                      setState(() {});
                     },
                     child: Text("nedim",
                         style: TextStyle(
@@ -127,12 +129,7 @@ class _HomeState extends State<Home> {
                             color: Colors.amberAccent))),
                 TextButton(
                     onPressed: () {
-                      setState(() {
-                        user.name = "Neim Ramazanoğlu";
-                        user.title = "Senior React Developer";
-                        user.mail = "mr.ramazanoglu@gmail.com";
-                        user.photo = "assets/neim.JPG";
-                      });
+                      setState(() {});
                     },
                     child: Text("neim",
                         style: TextStyle(
@@ -141,70 +138,6 @@ class _HomeState extends State<Home> {
                             color: Colors.amberAccent))),
               ],
             ),
-            Center(
-              child: CircleAvatar(
-                backgroundImage: AssetImage(user.photo),
-                radius: 40,
-              ),
-            ),
-            Divider(
-              height: 60,
-              color: Colors.amberAccent,
-            ),
-            Text(
-              "Name",
-              style: TextStyle(color: Colors.grey[500], letterSpacing: 2),
-            ),
-            SizedBox(height: 5.0),
-            Text(
-              name,
-              style: TextStyle(
-                  color: Colors.amberAccent,
-                  letterSpacing: 1,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              "Title",
-              style: TextStyle(color: Colors.grey[500], letterSpacing: 2),
-            ),
-            SizedBox(height: 5.0),
-            Text(
-              title,
-              style: TextStyle(
-                  color: Colors.amberAccent,
-                  letterSpacing: 1,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              "Contact",
-              style: TextStyle(color: Colors.grey[500], letterSpacing: 2),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Row(
-              children: [
-                Icon(
-                  Icons.email,
-                  color: Colors.grey[400],
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  mail,
-                  style: TextStyle(color: Colors.grey[400]),
-                )
-              ],
-            )
           ],
         ),
       ),
