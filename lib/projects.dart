@@ -7,9 +7,12 @@ class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 1,
+      padding: EdgeInsets.all(1),
+      margin: EdgeInsets.all(5),
+      alignment: Alignment.center,
       color: Colors.grey[900],
       child: Card(
+        margin: EdgeInsets.all(1),
         color: Colors.grey[900],
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
