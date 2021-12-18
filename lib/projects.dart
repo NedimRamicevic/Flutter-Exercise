@@ -7,12 +7,14 @@ class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(1),
       margin: EdgeInsets.all(5),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        color: Colors.amberAccent, //Borde
+      ),
       alignment: Alignment.center,
-      color: Colors.grey[900],
       child: Card(
-        margin: EdgeInsets.all(1),
+        margin: EdgeInsets.all(2),
         color: Colors.grey[900],
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
