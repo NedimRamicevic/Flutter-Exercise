@@ -81,6 +81,9 @@ class IdCard extends StatelessWidget {
               )
             ],
           ),
+          const SizedBox(
+            height: 20,
+          ),
           Projects(projectList: user.projects)
         ],
       ),

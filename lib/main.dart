@@ -68,6 +68,7 @@ class _HomeState extends State<Home> {
                             color: Colors.amberAccent))),
               ],
             ),
+            SizedBox(height: 5),
             IdCard(user: users[userNum])
           ],
         ),
