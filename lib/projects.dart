@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Projects extends StatelessWidget {
-  const Projects({Key? key, required this.projectList, required this.delete})
-      : super(key: key);
+  const Projects({Key? key, required this.projectList}) : super(key: key);
   final List<dynamic> projectList;
-  final Function delete;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +41,9 @@ class Projects extends StatelessWidget {
                             height: 5,
                           ),
                           TextButton.icon(
-                              onPressed: delete(),
+                              onPressed: () {
+                                projectList.remove(e);
+                              },
                               icon: const Icon(Icons.delete),
                               label: const Text("delete"))
                         ],
