@@ -41,7 +41,11 @@ class Projects extends StatelessWidget {
                           ),
                           const SizedBox(
                             height: 5,
-                          )
+                          ),
+                          TextButton.icon(
+                              onPressed: delete(),
+                              icon: const Icon(Icons.delete),
+                              label: const Text("delete"))
                         ],
                       ))
                   .toList(),
