@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Projects extends StatelessWidget {
-  const Projects({Key? key, required this.projectList}) : super(key: key);
+  const Projects({Key? key, required this.projectList, required this.delete})
+      : super(key: key);
   final List<dynamic> projectList;
+  final Function delete;
 
   @override
   Widget build(BuildContext context) {
