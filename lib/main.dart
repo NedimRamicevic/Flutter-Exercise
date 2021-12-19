@@ -69,7 +69,12 @@ class _HomeState extends State<Home> {
               ],
             ),
             SizedBox(height: 5),
-            IdCard(user: users[userNum])
+            IdCard(
+              user: users[userNum],
+              delete: (e) {
+                users[userNum].projects.remove(e);
+              },
+            )
           ],
         ),
       ),
