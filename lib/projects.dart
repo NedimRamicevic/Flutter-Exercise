@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 
 class Projects extends StatelessWidget {
-  const Projects({Key? key, required this.projectList}) : super(key: key);
+  const Projects({Key? key, required this.projectList, required this.delete})
+      : super(key: key);
   final List<dynamic> projectList;
+  final Function delete;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(5),
+      margin: const EdgeInsets.all(5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: Colors.amberAccent, //Borde
       ),
       alignment: Alignment.center,
       child: Card(
-        margin: EdgeInsets.all(2),
+        margin: const EdgeInsets.all(2),
         color: Colors.grey[900],
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -41,9 +43,7 @@ class Projects extends StatelessWidget {
                             height: 5,
                           ),
                           TextButton.icon(
-                              onPressed: () {
-                                projectList.remove(e);
-                              },
+                              onPressed: () => delete(e),
                               icon: const Icon(Icons.delete),
                               label: const Text("delete"))
                         ],

@@ -72,7 +72,9 @@ class _HomeState extends State<Home> {
             IdCard(
               user: users[userNum],
               delete: (e) {
-                users[userNum].projects.remove(e);
+                setState(() {
+                  users[userNum].projects.remove(e);
+                });
               },
             )
           ],
